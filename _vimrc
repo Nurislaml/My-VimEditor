@@ -4,19 +4,19 @@ au GUIEnter * simalt ~x
 set hls
 set is
 	set cb=unnamed
-set gfn=Fixedsys:h14
+set gfn=Fixedsys:h16
 set ts=4
 set sw=4
 set si
-cd C:\Users\asusn\contest
+cd /home/mukhash/cp
 
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap {{ {
 inoremap {} {}
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ % -o %:r && %:r.exe<CR>
-autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+autocmd FileType cpp nnoremap <F9> :w <bar> !g++ % -o %:r && ./%:r<CR>
+autocmd FileType cpp nnoremap <F10> :!./%:r<CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
 set nu
@@ -66,4 +66,4 @@ function MyDiff()
   endif
 endfunction
 
-set noswapfile 
+set noswapfile 		
