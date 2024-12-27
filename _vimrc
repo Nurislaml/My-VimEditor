@@ -17,6 +17,7 @@ inoremap {} {}
 
 autocmd FileType cpp nnoremap <F9> :w <bar> !g++ % -o %:r && ./%:r<CR>
 autocmd FileType cpp nnoremap <F10> :!./%:r<CR>
+autocmd filetype python nnoremap <F7> :w <bar> !python3 %<CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
 set nu
