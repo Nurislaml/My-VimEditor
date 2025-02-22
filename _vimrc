@@ -3,11 +3,13 @@ source $VIMRUNTIME/vimrc_example.vim
 au GUIEnter * simalt ~x
 set hls
 set is
-	set cb=unnamed
+set cb=unnamed
 set gfn=Fixedsys:h16
 set ts=4
 set sw=4
 set si
+set nobackup
+set nowritebackup
 cd /home/mukhash/cp
 
 inoremap { {}<Left>
