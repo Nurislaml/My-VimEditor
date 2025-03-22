@@ -3,14 +3,14 @@ source $VIMRUNTIME/vimrc_example.vim
 au GUIEnter * simalt ~x
 set hls
 set is
-set cb=unnamed
+	set cb=unnamed
 set gfn=Fixedsys:h16
 set ts=4
 set sw=4
 set si
 set nobackup
 set nowritebackup
-cd /home/mukhash/cp
+cd /home/nurislam/cp
 
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
@@ -24,9 +24,9 @@ autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\
 
 set nu
 augroup numbertoggle
-	    autocmd!
-	        autocmd BufEnter,FocusGained,InsertLeave * set rnu
-		    autocmd BufLeave,FocusLost,InsertEnter * set nornu
+	   autocmd!
+	       autocmd BufEnter,FocusGained,InsertLeave * set rnu
+		   autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
 " Remap a few keys for Windows behavior
 source $VIMRUNTIME/mswin.vim
@@ -69,4 +69,4 @@ function MyDiff()
   endif
 endfunction
 
-set noswapfile 		
+set noswapfile
