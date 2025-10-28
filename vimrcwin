@@ -1,0 +1,63 @@
+" === Minimal Clean _vimrc for Windows ===
+
+set nocompatible
+set encoding=utf-8
+syntax on
+filetype plugin indent on
+
+" === UI ===
+set number
+set relativenumber
+set cursorline
+set showmatch
+set laststatus=2
+set noshowmode
+
+" === Tabs & Indent ===
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" === Search ===
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" === No junk files ===
+set nobackup
+set nowritebackup
+set noswapfile
+set noundofile
+set backupdir=.
+set directory=.
+
+" === Clipboard ===
+set clipboard=unnamed
+
+" === Keymaps ===
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+
+" === Compile/Run shortcuts ===
+autocmd FileType cpp nnoremap <F9> :w<bar>!g++ % -o %:r && %:r<CR>
+autocmd FileType python nnoremap <F7> :w<bar>!python %<CR>
+
+" === Line numbers toggle in insert mode ===
+augroup numbertoggle
+    autocmd!
+    autocmd InsertEnter * set norelativenumber
+    autocmd InsertLeave * set relativenumber
+augroup END
+
+" === Font (GUI only) ===
+if has("gui_running")
+    set guifont=Consolas:h14
+endif
+
+" === No startup messages ===
+set shortmess+=I
+
+" === Optional Windows behavior ===
+source $VIMRUNTIME/mswin.vim
