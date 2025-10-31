@@ -30,8 +30,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 set noundofile
-set backupdir=.
-set directory=.
 
 " === Clipboard ===
 set clipboard=unnamed
@@ -53,7 +51,7 @@ augroup END
 
 " === Font (GUI only) ===
 if has("gui_running")
-    set guifont=Consolas:h14
+    set guifont=Fixedsys:h16
 endif
 
 " === No startup messages ===
